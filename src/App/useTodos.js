@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
+
 function useTodos() {
   const {
     item: todos,
     saveItem: saveTodos,
-    sincronizeItem: sincronizeTodos,
     loading,
     error,
   } = useLocalStorage('TODOS_V1', []);
@@ -49,7 +49,7 @@ function useTodos() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  
+
   return {
     loading,
     error,
@@ -63,8 +63,8 @@ function useTodos() {
     deleteTodo,
     openModal,
     setOpenModal,
-    sincronizeTodos,
-  };
+  }
+
 }
 
-export { useTodos };
+export {useTodos};
